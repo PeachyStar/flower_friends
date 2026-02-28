@@ -4,6 +4,11 @@ Spawn plots in a grid
 
 more tilemap options (dirt paths, ect.)
 
+genetic function (parent-based approach)
+mutation function
+
+edit existing code to implement RYB and bw hue/brightness
+
 Player:
 Better player sprite
 Player sprite animations
