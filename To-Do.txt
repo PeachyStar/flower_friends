@@ -1,0 +1,10 @@
+Spawn plots in a grid
+	maybe make plots a tilemap?
+	flowers cant be tilemap, so they have to spawn in a grid fashion regardless
+
+more tilemap options (dirt paths, ect.)
+
+Player:
+Better player sprite
+Player sprite animations
+
