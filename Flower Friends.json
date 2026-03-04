@@ -197,6 +197,102 @@
         "name": "Assets\\stem",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Light/daisy_light_red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Light\\daisy_light_red.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Light/daisy_light_orange.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Light\\daisy_light_orange.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Light/daisy_light_yellow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Light\\daisy_light_yellow.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Light/daisy_light_green.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Light\\daisy_light_green.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Light/daisy_light_blue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Light\\daisy_light_blue.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Light/daisy_light_purple.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Light\\daisy_light_purple.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Dark/daisy_dark_red.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Dark\\daisy_dark_red.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Dark/daisy_dark_orange.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Dark\\daisy_dark_orange.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Dark/daisy_dark_yellow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Dark\\daisy_dark_yellow.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Dark/daisy_dark_green.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Dark\\daisy_dark_green.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Dark/daisy_dark_blue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Dark\\daisy_dark_blue.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/Dark/daisy_dark_purple.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\Dark\\daisy_dark_purple.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -607,7 +703,7 @@
             {
               "name": "Hue",
               "type": "string",
-              "value": "white"
+              "value": "ryb"
             },
             {
               "name": "Brightness",
@@ -1006,6 +1102,582 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "light_red",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Light\\daisy_light_red.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "light_orange",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Light\\daisy_light_orange.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "light_yellow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Light\\daisy_light_yellow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "light_green",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Light\\daisy_light_green.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "light_blue",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Light\\daisy_light_blue.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "light_purple",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Light\\daisy_light_purple.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dark_red",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Dark\\daisy_dark_red.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dark_orange",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Dark\\daisy_dark_orange.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dark_yellow",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Dark\\daisy_dark_yellow.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dark_green",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Dark\\daisy_dark_green.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dark_blue",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Dark\\daisy_dark_blue.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dark_purple",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Assets\\Daisy\\Dark\\daisy_dark_purple.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -1219,7 +1891,7 @@
                 "Daisy",
                 "Hue",
                 "=",
-                "\"white\""
+                "\"ryb\""
               ]
             }
           ],
@@ -1259,7 +1931,7 @@
                 "Daisy",
                 "Hue",
                 "=",
-                "\"black\""
+                "\"RYB\""
               ]
             }
           ],
@@ -1316,7 +1988,7 @@
                     "Daisy",
                     "Hue",
                     "=",
-                    "\"red\""
+                    "\"Ryb\""
                   ]
                 }
               ],
@@ -1345,7 +2017,7 @@
                     "Daisy",
                     "Hue",
                     "=",
-                    "\"orange\""
+                    "\"RYb\""
                   ]
                 }
               ],
@@ -1374,7 +2046,7 @@
                     "Daisy",
                     "Hue",
                     "=",
-                    "\"yellow\""
+                    "\"rYb\""
                   ]
                 }
               ],
@@ -1403,7 +2075,7 @@
                     "Daisy",
                     "Hue",
                     "=",
-                    "\"green\""
+                    "\"rYB\""
                   ]
                 }
               ],
@@ -1432,7 +2104,7 @@
                     "Daisy",
                     "Hue",
                     "=",
-                    "\"blue\""
+                    "\"ryB\""
                   ]
                 }
               ],
@@ -1461,7 +2133,7 @@
                     "Daisy",
                     "Hue",
                     "=",
-                    "\"purple\""
+                    "\"RyB\""
                   ]
                 }
               ],
@@ -1475,6 +2147,392 @@
                     "Animation",
                     "=",
                     "\"neutral_purple\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Daisy",
+                "Brightness",
+                "=",
+                "\"light\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"Ryb\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"light_red\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"RYb\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"light_orange\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"rYb\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"light_yellow\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"rYB\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"light_green\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"ryB\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"light_blue\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"RyB\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"light_purple\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StringObjectVariable"
+              },
+              "parameters": [
+                "Daisy",
+                "Brightness",
+                "=",
+                "\"dark\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"Ryb\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"dark_red\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"RYb\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"dark_orange\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"rYb\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"dark_yellow\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"rYB\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"dark_green\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"ryB\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"dark_blue\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Hue",
+                    "=",
+                    "\"RyB\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Animation",
+                    "=",
+                    "\"dark_purple\""
                   ]
                 }
               ]

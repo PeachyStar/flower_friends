@@ -9,8 +9,6 @@ genetic function (parent-based approach)
 	HOW do we spawn new objects, and associate game objects with a related entry in some sort of list/array that holds all the flower class objects
 mutation function
 
-edit existing code to implement RYB and bw hue/brightness instead of red, orange, white, ect.
-
 Art:
 Better player sprite
 	+ Player sprite animations
