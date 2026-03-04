@@ -1,7 +1,3 @@
-Spawn plots in a grid
-	maybe make plots a tilemap?
-	flowers cant be tilemap, so they have to spawn in a grid fashion regardless
-
 flower object class
 	each object has a position, hue, and brightness variables
 	and a list of the nearby flowers and a list of nearby empty plots
