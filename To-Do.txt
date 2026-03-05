@@ -1,6 +1,6 @@
 flower object class
 	each object has a position, hue, and brightness variables
-	and a list of the nearby flowers and a list of nearby empty plots
+	and a list of the nearby flowers and a list of nearby empty plots?
 genetic function (parent-based approach)
 	HOW do we spawn new objects, and associate game objects with a related entry in some sort of list/array that holds all the flower class objects
 mutation function
