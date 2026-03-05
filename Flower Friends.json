@@ -297,8 +297,16 @@
       {
         "file": "Assets/Daisy/null.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"Assets/Daisy/null.png\",\"extension\":\".png\"}",
         "name": "Assets\\Daisy\\null.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
         "smoothed": false,
         "userAdded": false
       }
@@ -356,6 +364,11 @@
           "value": 592
         },
         {
+          "name": "plot_y_initial",
+          "type": "number",
+          "value": 304
+        },
+        {
           "name": "plot_x",
           "type": "number",
           "value": 592
@@ -364,26 +377,6 @@
           "name": "plot_y",
           "type": "number",
           "value": 304
-        },
-        {
-          "name": "p1_hue",
-          "type": "string",
-          "value": "0"
-        },
-        {
-          "name": "p1_brightness",
-          "type": "string",
-          "value": "0"
-        },
-        {
-          "name": "center_x",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "center_y",
-          "type": "number",
-          "value": 0
         }
       ],
       "instances": [
@@ -1735,6 +1728,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Assets\\Daisy\\null",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Daisy\\null.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 1
+                          },
+                          {
+                            "x": 13,
+                            "y": 10
+                          },
+                          {
+                            "x": 3,
+                            "y": 10
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1754,6 +1808,9 @@
           },
           {
             "objectName": "Daisy"
+          },
+          {
+            "objectName": "NewSprite"
           }
         ]
       },
@@ -1806,6 +1863,18 @@
               "parameters": [
                 "",
                 "\"SpreadTick\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "NewSprite",
+                "0",
+                "0",
+                ""
               ]
             }
           ],
@@ -2126,95 +2195,6 @@
             "textR": 0
           },
           "comment": "Flower Spreading"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CompareTimer"
-              },
-              "parameters": [
-                "",
-                "\"SpreadTick\"",
-                ">=",
-                "1"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"SpreadTick\""
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "Daisy",
-              "conditions": [],
-              "actions": []
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "PickRandomInstance"
-              },
-              "parameters": [
-                "",
-                "Daisy"
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PickedInstancesCount"
-                  },
-                  "parameters": [
-                    "Daisy",
-                    "=",
-                    "1"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Distance"
-                  },
-                  "parameters": [
-                    "Daisy",
-                    "Daisy",
-                    "8",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "Daisy",
-                    "\"0;0;0\""
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "layers": [
