@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 259,
+    "build": 260,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -341,7 +341,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.9284316855173913,
+        "zoomFactor": 1.7458023987468099,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -555,6 +555,7 @@
         {
           "assetStoreId": "",
           "name": "GroundTileMap",
+          "persistentUuid": "52d8a4db-4e3f-417d-9b30-f80e0f2bbc74",
           "type": "TileMap::SimpleTileMap",
           "variables": [],
           "effects": [],
@@ -571,6 +572,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Plot",
+          "persistentUuid": "542c4cf2-9b4f-4589-9dd3-78032066c58f",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -631,6 +633,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Stem",
+          "persistentUuid": "91845a27-7889-444a-9d67-b2a0e4ce8bad",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -653,7 +656,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Assets\\stem",
+                      "image": "Assets\\stem.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1733,6 +1736,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "NewSprite",
+          "persistentUuid": "8f5f1cd9-9d2a-496b-8b9f-0a4de759bf22",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1863,18 +1867,6 @@
               "parameters": [
                 "",
                 "\"SpreadTick\""
-              ]
-            },
-            {
-              "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "NewSprite",
-                "0",
-                "0",
-                ""
               ]
             }
           ],
