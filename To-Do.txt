@@ -3,6 +3,7 @@ take the code Austin wrote and collect the information of the neighbors and the 
 genetic function evaluates the parent and picks a neighbor, then picks genes
 mutation function has a change to edit one gene
 at the end of mutation, do something to make the child a new object 
+	place the child if there is a plot and there is no flower. place stem wait a few seconds place flower?
 at some point in this process determine where the new child will go
 
 UI:
@@ -19,10 +20,23 @@ The user can interact with the garden during the simulation:
 
 Ability to plant previously pulled flowers
      Complicated. Would require some sort of ‘inventory’ system
-
+Alternatively:
+     player can freely place flowers they have grown before (tied to the discovery system)
+     player can freely place a flower once they have plucked a certain number of that kind
 
 Art:
-Better player sprite
+player sprite (could use austins)
      + Player sprite animations
+
 more tilemap options (dirt paths, ect.)
+
+
+
+
+Whats been finished:
+all flower sprites
+plot initialization
+basic flower initialization
+flower color/animation selection
+
 
