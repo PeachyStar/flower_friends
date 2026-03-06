@@ -1,9 +1,20 @@
-flower object class
-	each object has a position, hue, and brightness variables
-	and a list of the nearby flowers and a list of nearby empty plots?
 genetic function (parent-based approach)
-	HOW do we spawn new objects, and associate game objects with a related entry in some sort of list/array that holds all the flower class objects
-mutation function
+    HOW do we spawn new objects with the required data
+
+UI:
+Flowers can be hovered over to display their name, such as “Light Blue Daisy”
+some sort of menu that keeps track of what colors the player has discovered
+    UI integration is the hardest part 
+    Internally, keep a variable of all color options paired with a bool, and when a child is created, set the relevant bool to True?
+    then if bool is true show the relevant asset/text
+
+The user can interact with the garden during the simulation:
+     Ability to pull unwanted flowers
+     Simple? Just delete the flower on click, I think. Ensure it is removed from any internal lists as well as visually.
+
+Ability to plant previously pulled flowers
+     Complicated. Would require some sort of ‘inventory’ system
+
 
 Art:
 Better player sprite
