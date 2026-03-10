@@ -1,7 +1,4 @@
 genetic stuff:
-take the code Austin wrote and collect the information of the neighbors and the parent into a list, then pass it to the genetic function
-genetic function evaluates the parent and picks a neighbor, then picks genes
-mutation function has a change to edit one gene
 at the end of mutation, do something to make the child a new object 
 	place the child if there is a plot and there is no flower. place stem wait a few seconds place flower?
 at some point in this process determine where the new child will go
@@ -12,7 +9,7 @@ Flowers can be hovered over to display their name, such as â€œLight Blue Daisyâ€
 some sort of menu that keeps track of what colors the player has discovered
     UI integration is the hardest part 
     Internally, keep a variable of all color options paired with a bool, and when a child is created, set the relevant bool to True?
-    then if bool is true show the relevant asset/text
+    then if bool is true show the relevant asset/text in the menu
 
 The user can interact with the garden during the simulation:
      Ability to pull unwanted flowers
@@ -33,7 +30,10 @@ more tilemap options (dirt paths, ect.)
 
 
 
-Whats been finished:
+What's been finished:
+parent selection function
+genetic function
+mutation function
 all flower sprites
 plot initialization
 basic flower initialization

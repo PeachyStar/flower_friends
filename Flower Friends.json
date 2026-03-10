@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 260,
+    "build": 261,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -700,6 +700,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Daisy",
+          "persistentUuid": "024ac3b9-4fc1-4912-8ea9-72f53786412a",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [
@@ -711,7 +712,7 @@
             {
               "name": "Brightness",
               "type": "string",
-              "value": "neutral"
+              "value": "wb"
             }
           ],
           "effects": [],
@@ -1919,7 +1920,7 @@
                     "Daisy",
                     "Brightness",
                     "=",
-                    "\"neutral\""
+                    "\"wb\""
                   ]
                 },
                 {
@@ -1971,7 +1972,7 @@
                     "Daisy",
                     "Brightness",
                     "=",
-                    "\"neutral\""
+                    "\"bw\""
                   ]
                 },
                 {
@@ -2023,7 +2024,7 @@
                     "Daisy",
                     "Brightness",
                     "=",
-                    "\"neutral\""
+                    "\"wb\""
                   ]
                 },
                 {
@@ -2187,6 +2188,91 @@
             "textR": 0
           },
           "comment": "Flower Spreading"
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "const daisies = runtimeScene.getObjects(\"Daisy\");",
+            "",
+            "for (let i = 0; i < daisies.length; i++) {",
+            "    const a = daisies[i];",
+            "    const neighbors = [];",
+            "    for (let j = 0; j < daisies.length; j++) {",
+            "        if (i === j) continue;",
+            "",
+            "        const b = daisies[j];",
+            "",
+            "        const dx = a.getCenterXInScene() - b.getCenterXInScene();",
+            "        const dy = a.getCenterYInScene() - b.getCenterYInScene();",
+            "        const distance = Math.sqrt(dx * dx + dy * dy);",
+            "",
+            "        if (distance < 17) {",
+            "            neighbors.push(b)",
+            "        }",
+            "    }",
+            "    generateChild(a, neighbors);",
+            "    return",
+            "}",
+            "",
+            "function generateChild(parent1, neighbors) {",
+            "    var child_hue = []",
+            "    var child_brightness = []",
+            "    const p1_hue = parent1.getVariables().get(\"Hue\").getAsString();",
+            "    const p1_brightness = parent1.getVariables().get(\"Brightness\").getAsString();",
+            "    if (neighbors.length == 0 || Math.random() < 0.5){ // 50% chance to clone",
+            "        child_hue = p1_hue;",
+            "        child_brightness = p1_brightness;",
+            "        mutate(child_hue, child_brightness);",
+            "        return",
+            "    }",
+            "    const parent2 = neighbors[Math.floor(Math.random() * neighbors.length)]; // picks a random neighbor",
+            "    const p2_hue = parent2.getVariables().get(\"Hue\").getAsString();",
+            "    const p2_brightness = parent2.getVariables().get(\"Brightness\").getAsString();",
+            "",
+            "    child_hue = crossover(p1_hue, p2_hue);",
+            "    child_brightness = crossover(p1_brightness, p2_brightness);",
+            "    mutate(child_hue, child_brightness);",
+            "    return",
+            "}",
+            "",
+            "function crossover(p1, p2){",
+            "    const child_gene = [];",
+            "",
+            "    for (let i = 0; i < p1.length; i++){",
+            "        child_gene[i] = Math.random() < 0.5 ? p1[i] : p2[i]; // 50% chance to take from either parent",
+            "    }",
+            "",
+            "    return child_gene;",
+            "}",
+            "",
+            "function mutate(hue, brightness){",
+            "    if (Math.random() < 0.1) { // 10% chance to mutate",
+            "        if (Math.random() < 0.5) { // 50% chance to mutate hue",
+            "            var i = Math.floor(Math.random()*3)",
+            "            if(hue[i] === hue[i].toLowerCase()){",
+            "                hue[i] === hue[i].toUpperCase()",
+            "            }else {",
+            "                hue[i] === hue[i].toLowerCase()",
+            "            }",
+            "        } else { // if not hue then brightness",
+            "            var i = Math.floor(Math.random()*2)",
+            "            if(brightness[i] == \"w\"){",
+            "                brightness[i] = \"b\"",
+            "            } else {",
+            "                brightness[i] = \"w\"",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "parameterObjects": "Daisy",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -2315,7 +2401,7 @@
                 "Daisy",
                 "Brightness",
                 "=",
-                "\"light\""
+                "\"ww\""
               ]
             },
             {
@@ -2355,7 +2441,7 @@
                 "Daisy",
                 "Brightness",
                 "=",
-                "\"dark\""
+                "\"bb\""
               ]
             },
             {
@@ -2376,13 +2462,32 @@
           "conditions": [
             {
               "type": {
-                "value": "StringObjectVariable"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "Daisy",
-                "Brightness",
-                "=",
-                "\"neutral\""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"bw\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"wb\""
+                  ]
+                }
               ]
             }
           ],
@@ -2575,7 +2680,7 @@
                 "Daisy",
                 "Brightness",
                 "=",
-                "\"light\""
+                "\"ww\""
               ]
             }
           ],
@@ -2768,7 +2873,7 @@
                 "Daisy",
                 "Brightness",
                 "=",
-                "\"dark\""
+                "\"bb\""
               ]
             }
           ],
