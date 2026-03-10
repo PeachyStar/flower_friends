@@ -309,6 +309,14 @@
         "name": "NewSprite",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Assets/Daisy/daisy_gray.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Daisy\\daisy_gray.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -341,7 +349,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.7458023987468099,
+        "zoomFactor": 4.418559405855477,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -729,6 +737,7 @@
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -830,6 +839,54 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Assets\\Daisy\\daisy_dark_black.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 16
+                          },
+                          {
+                            "x": 0,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "gray",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Daisy\\daisy_gray.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2390,20 +2447,50 @@
                 "=",
                 "\"ryb\""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"bw\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"wb\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"ww\""
+                  ]
+                }
+              ]
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "Daisy",
-                "Brightness",
-                "=",
-                "\"ww\""
-              ]
-            },
             {
               "type": {
                 "value": "AnimatableCapability::AnimatableBehavior::SetName"
@@ -2413,6 +2500,17 @@
                 "Animation",
                 "=",
                 "\"white\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetStringObjectVariable"
+              },
+              "parameters": [
+                "Daisy",
+                "Brightness",
+                "=",
+                "\"ww\""
               ]
             }
           ]
@@ -2430,9 +2528,61 @@
                 "=",
                 "\"RYB\""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"bw\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"wb\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Daisy",
+                    "Brightness",
+                    "=",
+                    "\"bb\""
+                  ]
+                }
+              ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Daisy",
+                "Animation",
+                "=",
+                "\"black\""
+              ]
+            },
             {
               "type": {
                 "value": "SetStringObjectVariable"
@@ -2443,7 +2593,82 @@
                 "=",
                 "\"bb\""
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Daisy",
+                        "Hue",
+                        "=",
+                        "\"RYB\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Daisy",
+                        "Brightness",
+                        "=",
+                        "\"ww\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Daisy",
+                        "Hue",
+                        "=",
+                        "\"ryb\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Daisy",
+                        "Brightness",
+                        "=",
+                        "\"bb\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
             {
               "type": {
                 "value": "AnimatableCapability::AnimatableBehavior::SetName"
@@ -2452,7 +2677,7 @@
                 "Daisy",
                 "Animation",
                 "=",
-                "\"black\""
+                "\"gray\""
               ]
             }
           ]
