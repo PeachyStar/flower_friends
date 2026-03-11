@@ -349,7 +349,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 4.418559405855477,
+        "zoomFactor": 4.274424404047957,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -370,11 +370,6 @@
           "name": "plot_x_initial",
           "type": "number",
           "value": 592
-        },
-        {
-          "name": "plot_y_initial",
-          "type": "number",
-          "value": 304
         },
         {
           "name": "plot_x",
@@ -407,8 +402,8 @@
           "name": "Player",
           "persistentUuid": "da09a495-278a-42f9-b556-0001499f5329",
           "width": 0,
-          "x": 640,
-          "y": 322,
+          "x": 688,
+          "y": 370,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -424,8 +419,8 @@
           "name": "GroundTileMap",
           "persistentUuid": "16664677-7b6e-4a44-87d3-7a488bcfcd6c",
           "width": 1344,
-          "x": 0,
-          "y": -160,
+          "x": -48,
+          "y": -192,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [
@@ -442,6 +437,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Player",
+          "persistentUuid": "79e2ca48-836b-44ee-ace1-861c9a062419",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1855,16 +1851,6 @@
             },
             {
               "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "plot_x",
-                "=",
-                "plot_x_initial"
-              ]
-            },
-            {
-              "type": {
                 "value": "ResetTimer"
               },
               "parameters": [
@@ -1899,7 +1885,7 @@
               "parameters": [
                 "plot_rows",
                 "=",
-                "7"
+                "13"
               ]
             },
             {
@@ -1909,7 +1895,37 @@
               "parameters": [
                 "plot_columns",
                 "=",
-                "7"
+                "13"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_x_initial",
+                "=",
+                "592"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_y",
+                "=",
+                "304"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_x",
+                "=",
+                "plot_x_initial"
               ]
             }
           ],
@@ -1937,8 +1953,8 @@
                   "parameters": [
                     "",
                     "Stem",
-                    "plot_x+16*2",
-                    "plot_y+16*3",
+                    "plot_x+16*5",
+                    "plot_y+16*6",
                     ""
                   ]
                 },
@@ -1949,8 +1965,8 @@
                   "parameters": [
                     "",
                     "Daisy",
-                    "plot_x+16*2",
-                    "plot_y+16*3",
+                    "plot_x+16*5",
+                    "plot_y+16*6",
                     ""
                   ]
                 },
@@ -1989,8 +2005,8 @@
                   "parameters": [
                     "",
                     "Stem",
-                    "plot_x+16*3",
-                    "plot_y+16*3",
+                    "plot_x+16*6",
+                    "plot_y+16*6",
                     ""
                   ]
                 },
@@ -2001,8 +2017,8 @@
                   "parameters": [
                     "",
                     "Daisy",
-                    "plot_x+16*3",
-                    "plot_y+16*3",
+                    "plot_x+16*6",
+                    "plot_y+16*6",
                     ""
                   ]
                 },
@@ -2041,8 +2057,8 @@
                   "parameters": [
                     "",
                     "Stem",
-                    "plot_x+16*4",
-                    "plot_y+16*3",
+                    "plot_x+16*7",
+                    "plot_y+16*6",
                     ""
                   ]
                 },
@@ -2053,8 +2069,8 @@
                   "parameters": [
                     "",
                     "Daisy",
-                    "plot_x+16*4",
-                    "plot_y+16*3",
+                    "plot_x+16*7",
+                    "plot_y+16*6",
                     ""
                   ]
                 },
@@ -2237,7 +2253,7 @@
                 "",
                 "\"SpreadTick\"",
                 ">=",
-                "2"
+                "3"
               ]
             }
           ],
@@ -2299,13 +2315,16 @@
                 "    const key = plot.getX() + \",\" + plot.getY();",
                 "",
                 "    const stem = runtimeScene.createObject(\"Stem\");",
-                "    const newDaisy = runtimeScene.createObject(\"Daisy\");",
-                "",
-                "    newDaisy.getVariables().get(\"Hue\").setString(child.hue);",
-                "    newDaisy.getVariables().get(\"Brightness\").setString(child.brightness);",
                 "    stem.setPosition(plot.getX(), plot.getY());",
-                "    newDaisy.setPosition(plot.getX(), plot.getY());",
-                "    grid.get(key).daisy = newDaisy;",
+                "",
+                "    setTimeout(() => {",
+                "        const newDaisy = runtimeScene.createObject(\"Daisy\");",
+                "        newDaisy.getVariables().get(\"Hue\").setString(child.hue);",
+                "        newDaisy.getVariables().get(\"Brightness\").setString(child.brightness);",
+                "        newDaisy.setPosition(plot.getX(), plot.getY());",
+                "",
+                "        grid.get(key).daisy = newDaisy;",
+                "    }, 2000);",
                 "}",
                 "",
                 "",
