@@ -385,6 +385,16 @@
           "name": "plot_y",
           "type": "number",
           "value": 304
+        },
+        {
+          "name": "plot_columns",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "plot_rows",
+          "type": "number",
+          "value": 6
         }
       ],
       "instances": [
@@ -1789,68 +1799,6 @@
               ]
             }
           ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": false,
-          "assetStoreId": "",
-          "name": "NewSprite",
-          "persistentUuid": "8f5f1cd9-9d2a-496b-8b9f-0a4de759bf22",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Assets\\Daisy\\null",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Assets\\Daisy\\null.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 3,
-                            "y": 1
-                          },
-                          {
-                            "x": 13,
-                            "y": 1
-                          },
-                          {
-                            "x": 13,
-                            "y": 10
-                          },
-                          {
-                            "x": 3,
-                            "y": 10
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1870,9 +1818,6 @@
           },
           {
             "objectName": "Daisy"
-          },
-          {
-            "objectName": "NewSprite"
           }
         ]
       },
@@ -1925,6 +1870,46 @@
               "parameters": [
                 "",
                 "\"SpreadTick\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_counter_rows",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_counter_columns",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_rows",
+                "=",
+                "7"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "plot_columns",
+                "=",
+                "7"
               ]
             }
           ],
@@ -2029,7 +2014,7 @@
                     "Daisy",
                     "Brightness",
                     "=",
-                    "\"bw\""
+                    "\"wb\""
                   ]
                 },
                 {
@@ -2100,11 +2085,6 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -2126,7 +2106,7 @@
               "parameters": [
                 "plot_counter_rows",
                 "<=",
-                "6"
+                "plot_rows"
               ]
             }
           ],
@@ -2175,7 +2155,7 @@
                   "parameters": [
                     "plot_counter_rows",
                     ">",
-                    "6"
+                    "plot_rows"
                   ]
                 },
                 {
@@ -2185,7 +2165,7 @@
                   "parameters": [
                     "plot_counter_columns",
                     "<",
-                    "6"
+                    "plot_columns"
                   ]
                 }
               ],
@@ -2227,7 +2207,7 @@
                   "parameters": [
                     "plot_counter_rows",
                     "=",
-                    "0"
+                    "1"
                   ]
                 }
               ]
@@ -2247,84 +2227,194 @@
           "comment": "Flower Spreading"
         },
         {
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": [
-            "const daisies = runtimeScene.getObjects(\"Daisy\");",
-            "",
-            "for (let i = 0; i < daisies.length; i++) {",
-            "    const a = daisies[i];",
-            "    const neighbors = [];",
-            "    for (let j = 0; j < daisies.length; j++) {",
-            "        if (i === j) continue;",
-            "",
-            "        const b = daisies[j];",
-            "",
-            "        const dx = a.getCenterXInScene() - b.getCenterXInScene();",
-            "        const dy = a.getCenterYInScene() - b.getCenterYInScene();",
-            "        const distance = Math.sqrt(dx * dx + dy * dy);",
-            "",
-            "        if (distance < 17) {",
-            "            neighbors.push(b)",
-            "        }",
-            "    }",
-            "    generateChild(a, neighbors);",
-            "    return",
-            "}",
-            "",
-            "function generateChild(parent1, neighbors) {",
-            "    var child_hue = []",
-            "    var child_brightness = []",
-            "    const p1_hue = parent1.getVariables().get(\"Hue\").getAsString().split(\"\");",
-            "    const p1_brightness = parent1.getVariables().get(\"Brightness\").getAsString().split(\"\");",
-            "    if (neighbors.length == 0 || Math.random() < 0.5){ // 50% chance to clone",
-            "        child_hue = p1_hue;",
-            "        child_brightness = p1_brightness;",
-            "        mutate(child_hue, child_brightness);",
-            "        return",
-            "    }",
-            "    const parent2 = neighbors[Math.floor(Math.random() * neighbors.length)]; // picks a random neighbor",
-            "    const p2_hue = parent2.getVariables().get(\"Hue\").getAsString().split(\"\");",
-            "    const p2_brightness = parent2.getVariables().get(\"Brightness\").getAsString().split(\"\");",
-            "",
-            "    child_hue = crossover(p1_hue, p2_hue);",
-            "    child_brightness = crossover(p1_brightness, p2_brightness);",
-            "    mutate(child_hue, child_brightness);",
-            "    return",
-            "}",
-            "",
-            "function crossover(p1, p2){",
-            "    const child_gene = [];",
-            "",
-            "    for (let i = 0; i < p1.length; i++){",
-            "        child_gene[i] = Math.random() < 0.5 ? p1[i] : p2[i]; // 50% chance to take from either parent",
-            "    }",
-            "",
-            "    return child_gene;",
-            "}",
-            "",
-            "function mutate(hue, brightness){ // chance to change a single character in either hue or brightness",
-            "    if (Math.random() < 0.1) { // 10% chance to mutate",
-            "        if (Math.random() < 0.5) { // 50% chance to mutate hue",
-            "            var i = Math.floor(Math.random()*3)",
-            "            if(hue[i] === hue[i].toLowerCase()){",
-            "                hue[i] = hue[i].toUpperCase()",
-            "            }else {",
-            "                hue[i] = hue[i].toLowerCase()",
-            "            }",
-            "        } else { // if not hue then mutate brightness",
-            "            var i = Math.floor(Math.random()*2)",
-            "            if(brightness[i] == \"w\"){",
-            "                brightness[i] = \"b\"",
-            "            } else {",
-            "                brightness[i] = \"w\"",
-            "            }",
-            "        }",
-            "    }",
-            "}"
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"SpreadTick\"",
+                ">=",
+                "2"
+              ]
+            }
           ],
-          "parameterObjects": "Daisy",
-          "useStrict": true,
-          "eventsSheetExpanded": true
+          "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"SpreadTick\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const plots = runtimeScene.getObjects(\"Plot\");",
+                "const daisies = runtimeScene.getObjects(\"Daisy\");",
+                "const offsets = [",
+                "    [-1,-1],[0,-1],[1,-1],",
+                "    [-1,0],        [1,0],",
+                "    [-1,1],[0,1],[1,1]",
+                "];",
+                "const grid = new Map();",
+                "",
+                "for (let i = 0; i < plots.length; i++) {",
+                "",
+                "    const plot = plots[i];",
+                "",
+                "    const key = plot.getX() + \",\" + plot.getY();",
+                "",
+                "    grid.set(key, {",
+                "        plot: plot,",
+                "        daisy: null",
+                "    });",
+                "}",
+                "",
+                "for (let i = 0; i < daisies.length; i++) {",
+                "",
+                "    const d = daisies[i];",
+                "",
+                "    const key = d.getX() + \",\" + d.getY();",
+                "",
+                "    if (grid.has(key)) {",
+                "        grid.get(key).daisy = d;",
+                "    }",
+                "}",
+                "",
+                "var parent1 = daisies[Math.floor(Math.random() * daisies.length)]",
+                "const empty = getEmptyNeighbors(parent1, grid, 16);",
+                "if (empty.length > 0){",
+                "    const neighbors = getNeighbors(parent1, grid, 16,);",
+                "",
+                "    const child = generateChild(parent1, neighbors);",
+                "",
+                "    const plot = empty[Math.floor(Math.random()*empty.length)];",
+                "    const key = plot.getX() + \",\" + plot.getY();",
+                "",
+                "    const stem = runtimeScene.createObject(\"Stem\");",
+                "    const newDaisy = runtimeScene.createObject(\"Daisy\");",
+                "",
+                "    newDaisy.getVariables().get(\"Hue\").setString(child.hue);",
+                "    newDaisy.getVariables().get(\"Brightness\").setString(child.brightness);",
+                "    stem.setPosition(plot.getX(), plot.getY());",
+                "    newDaisy.setPosition(plot.getX(), plot.getY());",
+                "    grid.get(key).daisy = newDaisy;",
+                "}",
+                "",
+                "",
+                "function getEmptyNeighbors(daisy, grid, tileSize){",
+                "",
+                "    const px = daisy.getX();",
+                "    const py = daisy.getY();",
+                "",
+                "    const empty = [];",
+                "",
+                "    for (let i = 0; i < offsets.length; i++) {",
+                "",
+                "        const nx = px + offsets[i][0]*tileSize;",
+                "        const ny = py + offsets[i][1]*tileSize;",
+                "",
+                "        const key = nx + \",\" + ny;",
+                "",
+                "        if (grid.has(key) && grid.get(key).daisy === null){",
+                "            empty.push(grid.get(key).plot);",
+                "        }",
+                "    }",
+                "",
+                "    return empty;",
+                "}",
+                "",
+                "function getNeighbors(daisy, grid, tileSize){",
+                "",
+                "    const px = daisy.getX();",
+                "    const py = daisy.getY();",
+                "",
+                "    const neighbors = [];",
+                "",
+                "    for (let i = 0; i < offsets.length; i++) {",
+                "",
+                "        const nx = px + offsets[i][0]*tileSize;",
+                "        const ny = py + offsets[i][1]*tileSize;",
+                "",
+                "        const key = nx + \",\" + ny;",
+                "",
+                "        if (grid.has(key) && grid.get(key).daisy !== null){",
+                "            neighbors.push(grid.get(key).daisy);",
+                "        }",
+                "    }",
+                "",
+                "    return neighbors;",
+                "}",
+                "",
+                "function generateChild(parent1, neighbors) {",
+                "    var child_hue = []",
+                "    var child_brightness = []",
+                "    const p1_hue = parent1.getVariables().get(\"Hue\").getAsString().split(\"\");",
+                "    const p1_brightness = parent1.getVariables().get(\"Brightness\").getAsString().split(\"\");",
+                "    if (neighbors.length == 0 || Math.random() < 0.3){ // 30% chance to clone",
+                "        child_hue = [...p1_hue];",
+                "        child_brightness = [...p1_brightness];",
+                "        mutate(child_hue, child_brightness);",
+                "        return {",
+                "        hue: child_hue.join(\"\"),",
+                "        brightness: child_brightness.join(\"\")",
+                "        }",
+                "    }",
+                "    const parent2 = neighbors[Math.floor(Math.random() * neighbors.length)]; // picks a random neighbor",
+                "    const p2_hue = parent2.getVariables().get(\"Hue\").getAsString().split(\"\");",
+                "    const p2_brightness = parent2.getVariables().get(\"Brightness\").getAsString().split(\"\");",
+                "",
+                "    child_hue = crossover(p1_hue, p2_hue);",
+                "    child_brightness = crossover(p1_brightness, p2_brightness);",
+                "    mutate(child_hue, child_brightness);",
+                "    return {",
+                "        hue: child_hue.join(\"\"),",
+                "        brightness: child_brightness.join(\"\")",
+                "    }",
+                "}",
+                "",
+                "function crossover(p1, p2){",
+                "    const child_gene = [];",
+                "",
+                "    for (let i = 0; i < p1.length; i++){",
+                "        child_gene[i] = Math.random() < 0.5 ? p1[i] : p2[i]; // 50% chance to take from either parent",
+                "    }",
+                "",
+                "    return child_gene;",
+                "}",
+                "",
+                "function mutate(hue, brightness){ // chance to change a single character in either hue or brightness",
+                "    if (Math.random() < 0.005) { // 0.5 % chance to mutate",
+                "        if (Math.random() < 0.5) { // mutate hue or brightness",
+                "            var i = Math.floor(Math.random()*3)",
+                "            if(hue[i] === hue[i].toLowerCase()){",
+                "                hue[i] = hue[i].toUpperCase()",
+                "            }else {",
+                "                hue[i] = hue[i].toLowerCase()",
+                "            }",
+                "        } else { ",
+                "            var i = Math.floor(Math.random()*2)",
+                "            if(brightness[i] == \"w\"){",
+                "                brightness[i] = \"b\"",
+                "            } else {",
+                "                brightness[i] = \"w\"",
+                "            }",
+                "        }",
+                "    }",
+                "}"
+              ],
+              "parameterObjects": "Daisy",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",

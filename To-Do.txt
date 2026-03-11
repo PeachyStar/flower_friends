@@ -1,7 +1,7 @@
 genetic stuff:
-at the end of mutation, do something to make the child a new object 
-	place the child if there is a plot and there is no flower. place stem wait a few seconds place flower?
-at some point in this process determine where the new child will go
+ place stem wait a few seconds place flower?
+change so grid is not re initialized every time
+
 
 UI:
 Flowers can be hovered over to display their name, such as “Light Blue Daisy”
@@ -31,6 +31,7 @@ more tilemap options (dirt paths, ect.)
 
 
 What's been finished:
+flower spawning
 parent selection function
 genetic function
 mutation function
