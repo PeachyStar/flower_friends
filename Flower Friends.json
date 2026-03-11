@@ -1953,8 +1953,8 @@
                   "parameters": [
                     "",
                     "Stem",
-                    "plot_x+16*5",
-                    "plot_y+16*6",
+                    "plot_x+16*(floor(plot_rows/2)-1)",
+                    "plot_y+16*floor(plot_rows/2)",
                     ""
                   ]
                 },
@@ -1965,8 +1965,8 @@
                   "parameters": [
                     "",
                     "Daisy",
-                    "plot_x+16*5",
-                    "plot_y+16*6",
+                    "plot_x+16*(floor(plot_rows/2)-1)",
+                    "plot_y+16*floor(plot_rows/2)",
                     ""
                   ]
                 },
@@ -2005,8 +2005,8 @@
                   "parameters": [
                     "",
                     "Stem",
-                    "plot_x+16*6",
-                    "plot_y+16*6",
+                    "plot_x+16*floor(plot_rows/2)",
+                    "plot_y+16*floor(plot_rows/2)",
                     ""
                   ]
                 },
@@ -2017,8 +2017,8 @@
                   "parameters": [
                     "",
                     "Daisy",
-                    "plot_x+16*6",
-                    "plot_y+16*6",
+                    "plot_x+16*floor(plot_rows/2)",
+                    "plot_y+16*floor(plot_rows/2)",
                     ""
                   ]
                 },
@@ -2057,8 +2057,8 @@
                   "parameters": [
                     "",
                     "Stem",
-                    "plot_x+16*7",
-                    "plot_y+16*6",
+                    "plot_x+16*(floor(plot_rows/2)+1)",
+                    "plot_y+16*floor(plot_rows/2)",
                     ""
                   ]
                 },
@@ -2069,8 +2069,8 @@
                   "parameters": [
                     "",
                     "Daisy",
-                    "plot_x+16*7",
-                    "plot_y+16*6",
+                    "plot_x+16*(floor(plot_rows/2)+1)",
+                    "plot_y+16*floor(plot_rows/2)",
                     ""
                   ]
                 },
