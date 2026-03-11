@@ -1927,6 +1927,15 @@
                 "=",
                 "plot_x_initial"
               ]
+            },
+            {
+              "type": {
+                "value": "ChangeTimeScale"
+              },
+              "parameters": [
+                "",
+                "3"
+              ]
             }
           ],
           "events": [
@@ -2316,14 +2325,13 @@
                 "",
                 "    const stem = runtimeScene.createObject(\"Stem\");",
                 "    stem.setPosition(plot.getX(), plot.getY());",
+                "    const newDaisy = runtimeScene.createObject(\"Daisy\");",
+                "    newDaisy.getVariables().get(\"Hue\").setString(child.hue);",
+                "    newDaisy.getVariables().get(\"Brightness\").setString(child.brightness);",
+                "    grid.get(key).daisy = newDaisy;",
                 "",
                 "    setTimeout(() => {",
-                "        const newDaisy = runtimeScene.createObject(\"Daisy\");",
-                "        newDaisy.getVariables().get(\"Hue\").setString(child.hue);",
-                "        newDaisy.getVariables().get(\"Brightness\").setString(child.brightness);",
                 "        newDaisy.setPosition(plot.getX(), plot.getY());",
-                "",
-                "        grid.get(key).daisy = newDaisy;",
                 "    }, 2000);",
                 "}",
                 "",
