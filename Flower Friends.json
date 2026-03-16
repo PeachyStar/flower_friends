@@ -9344,6 +9344,18 @@
                 "=",
                 "Light_Colors.Y()+80"
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         },
@@ -9464,6 +9476,45 @@
               "parameters": [
                 "",
                 "\"Dark Colors\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "Back",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "PlaceFlower.Ready",
+                "False",
+                ""
               ]
             }
           ]
@@ -11761,6 +11812,57 @@
                 "=",
                 "Blue.CenterY() - 150"
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "Back",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "PlaceFlower.Ready",
+                "False",
+                ""
+              ]
             }
           ]
         },
@@ -11942,6 +12044,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -12080,6 +12194,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -12222,6 +12348,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -12360,6 +12498,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -12502,6 +12652,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -12640,6 +12802,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -15465,6 +15639,57 @@
                 "=",
                 "Blue.CenterY() + 150"
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "Back",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "PlaceFlower.Ready",
+                "False",
+                ""
+              ]
             }
           ]
         },
@@ -15646,6 +15871,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -15784,6 +16021,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -15926,6 +16175,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -16064,6 +16325,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -16206,6 +16479,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -16344,6 +16629,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -16486,6 +16783,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -16626,6 +16935,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -16764,6 +17085,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -19076,6 +19409,57 @@
                 "=",
                 "Blue.CenterY() - 150"
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "Back",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "PlaceFlower.Ready",
+                "False",
+                ""
+              ]
             }
           ]
         },
@@ -19257,6 +19641,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -19395,6 +19791,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -19537,6 +19945,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -19675,6 +20095,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
@@ -19826,6 +20258,18 @@
                     "True",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
                 }
               ]
             }
@@ -19973,6 +20417,18 @@
                   "parameters": [
                     "PlaceFlower.Ready",
                     "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
                     ""
                   ]
                 }
