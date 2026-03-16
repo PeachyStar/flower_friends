@@ -1,11 +1,6 @@
 UI:
 Flowers can be hovered over to display their name, such as “Light Blue Daisy”
 
-some sort of menu that keeps track of what colors the player has discovered
-    UI integration is the hardest part 
-    Internally, keep a variable of all color options paired with a bool, and when a child is created, set the relevant bool to True?
-    then if bool is true show the relevant asset/text in the menu
-
 The user can interact with the garden during the simulation:
      Ability to pull unwanted flowers
      Simple? Just delete the flower on click, I think. Ensure it is removed from any internal lists as well as visually.
@@ -34,5 +29,5 @@ all flower sprites
 plot initialization
 basic flower initialization
 flower color/animation selection
-
+discovery menu
 

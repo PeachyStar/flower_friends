@@ -362,14 +362,6 @@
         }
       },
       {
-        "file": "Icon2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Icon2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "Assets/MenuSoundEffect.mp3",
         "kind": "audio",
         "metadata": "",
@@ -380,38 +372,12 @@
         "userAdded": false
       },
       {
-        "file": "assets/Kenney Mini.ttf",
-        "kind": "font",
-        "metadata": "",
-        "name": "5e2e3fcc57885d5e510934e621be5f8dd7a5b6425cf46ef38073e3d2c3b04048_Kenney Mini.ttf",
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Kenney Font Pack/5e2e3fcc57885d5e510934e621be5f8dd7a5b6425cf46ef38073e3d2c3b04048_Kenney Mini.ttf",
-          "name": "gdevelop-asset-store"
-        }
-      },
-      {
-        "file": "assets/8BitOperatorPlus8Regular_Edited2.png",
+        "file": "Assets/Icon.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\8BitOperatorPlus8Regular_Edited.png2",
+        "name": "Assets\\Icon.png",
         "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Bitmap texts/GDevelop/15c1797cbcb41c3a753b6bbb21cfa60284cfaf81c9891c3abf78a8e0e1cacf59_8BitOperatorPlus8Regular_Edited.png",
-          "name": "8BitOperatorPlus8Regular_Edited.png"
-        }
-      },
-      {
-        "file": "assets/8BitOperatorPlus8Regular_Edited2.fnt",
-        "kind": "bitmapFont",
-        "metadata": "",
-        "name": "assets\\8BitOperatorPlus8Regular_Edited.fnt2",
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Bitmap texts/GDevelop/6b410f07a3a02e721a49d41795e84b56707ef28ac4d095d55f1fd1093760e134_8BitOperatorPlus8Regular_Edited.fnt",
-          "name": "8BitOperatorPlus8Regular_Edited.fnt"
-        }
+        "userAdded": false
       }
     ]
   },
@@ -444,7 +410,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.7619362677197759,
+        "zoomFactor": 1.4307927813134564,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -540,8 +506,8 @@
           "layer": "Menu/UI",
           "name": "MenuButton",
           "persistentUuid": "3386ccdb-d4cc-497f-8f50-faf6adc8c670",
-          "width": 64,
-          "x": 880,
+          "width": 80,
+          "x": 864,
           "y": 192,
           "zOrder": 2,
           "numberProperties": [],
@@ -2649,7 +2615,7 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "LabelText": "Flower Menu",
+            "LabelText": "Discovery Log",
             "PressedLabelOffsetY": 2
           }
         },
@@ -2688,7 +2654,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Icon2.png",
+                      "image": "Assets\\Icon.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3759,7 +3725,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Icon2.png",
+                      "image": "Assets\\Icon.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4822,8 +4788,8 @@
             "scale": 1,
             "fontSize": 20,
             "tint": "0;0;0",
-            "bitmapFontResourceName": "assets\\8BitOperatorPlus8Regular_Edited.fnt2",
-            "textureAtlasResourceName": "assets\\8BitOperatorPlus8Regular_Edited.png2",
+            "bitmapFontResourceName": "assets\\8BitOperatorPlus8Regular_Edited.fnt",
+            "textureAtlasResourceName": "assets\\8BitOperatorPlus8Regular_Edited.png",
             "align": "left",
             "verticalTextAlignment": "top"
           }
