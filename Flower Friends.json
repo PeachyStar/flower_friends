@@ -20316,15 +20316,6 @@
                 },
                 {
                   "type": {
-                    "value": "PushScene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game Scene\""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetBooleanVariable"
                   },
                   "parameters": [
@@ -20473,15 +20464,6 @@
                     "PlaceFlower.Brightness",
                     "=",
                     "\"bb\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PushScene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game Scene\""
                   ]
                 },
                 {
