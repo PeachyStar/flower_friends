@@ -488,7 +488,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7876290101673779,
+        "zoomFactor": 0.6040838749988887,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -2447,7 +2447,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.4307927813134564,
+        "zoomFactor": 0.7370816317994183,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -7939,6 +7939,200 @@
           "parameterObjects": "MenuSlot",
           "useStrict": true,
           "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Deletion of flowers"
+        },
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "var inputManager = runtimeScene.getGame().getInputManager();",
+            "var vars = runtimeScene.getVariables();",
+            "",
+            "",
+            "if (inputManager.isKeyPressed(\"f\")) {",
+            "   vars.get(\"FHeld\").setBoolean(true);",
+            "}",
+            "",
+            "",
+            "if (inputManager.isMouseButtonReleased(0) && vars.get(\"FHeld\").getAsBoolean()) {",
+            "   vars.get(\"TestCount\").setNumber(vars.get(\"TestCount\").getAsNumber() + 1);",
+            "   vars.get(\"FHeld\").setBoolean(false);",
+            "}",
+            "",
+            "",
+            "if (!inputManager.isKeyPressed(\"f\")) {",
+            "   vars.get(\"FHeld\").setBoolean(false);",
+            "}",
+            "",
+            ""
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"f\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "CursorType::ChangeCursorType"
+              },
+              "parameters": [
+                "",
+                "\"not-allowed\"",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "var inputManager = runtimeScene.getGame().getInputManager();",
+                "if (!inputManager.isMouseButtonReleased(0)) return;",
+                "",
+                "",
+                "var mouseX = inputManager.getMouseX();",
+                "var mouseY = inputManager.getMouseY();",
+                "",
+                "",
+                "var baseLayer = runtimeScene.getLayer(\"\");",
+                "var coords = baseLayer.convertCoords(mouseX, mouseY);",
+                "var worldX = coords[0];",
+                "var worldY = coords[1];",
+                "",
+                "",
+                "var gridX = Math.floor(worldX / 16) * 16;",
+                "var gridY = Math.floor(worldY / 16) * 16;",
+                "",
+                "",
+                "var daisies = runtimeScene.getObjects(\"Daisy\");",
+                "var stems = runtimeScene.getObjects(\"Stem\");",
+                "",
+                "",
+                "for (var i = 0; i < daisies.length; i++) {",
+                "   var d = daisies[i];",
+                "   if (Math.abs(d.getX() - gridX) < 8 && Math.abs(d.getY() - gridY) < 8) {",
+                "       var hx = d.getX();",
+                "       var hy = d.getY();",
+                "      ",
+                "       d.deleteFromScene(runtimeScene);",
+                "",
+                "",
+                "       for (var j = 0; j < stems.length; j++) {",
+                "           if (stems[j].getX() === hx && stems[j].getY() === hy) {",
+                "               stems[j].deleteFromScene(runtimeScene);",
+                "               break;",
+                "           }",
+                "       }",
+                "       break;",
+                "   }",
+                "}",
+                "",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "var inputManager = runtimeScene.getGame().getInputManager();",
+                "var mouseX = inputManager.getMouseX();",
+                "var mouseY = inputManager.getMouseY();",
+                "",
+                "",
+                "var baseLayer = runtimeScene.getLayer(\"\");",
+                "var coords = baseLayer.convertCoords(mouseX, mouseY);",
+                "var worldX = coords[0];",
+                "var worldY = coords[1];",
+                "",
+                "",
+                "var gridX = Math.floor(worldX / 16) * 16;",
+                "var gridY = Math.floor(worldY / 16) * 16;",
+                "",
+                "",
+                "var daisies = runtimeScene.getObjects(\"Daisy\");",
+                "",
+                "",
+                "for (var i = 0; i < daisies.length; i++) {",
+                "   var d = daisies[i];",
+                "   if (Math.abs(d.getX() - gridX) < 8 && Math.abs(d.getY() - gridY) < 8) {",
+                "       d.setColor(\"255;80;80\");",
+                "   } else {",
+                "       d.setColor(\"255;255;255\");",
+                "   }",
+                "}",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextReleased"
+              },
+              "parameters": [
+                "",
+                "\"f\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "CursorType::ChangeCursorType"
+              },
+              "parameters": [
+                "",
+                "\"auto\"",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "var daisies = runtimeScene.getObjects(\"Daisy\");",
+                "for (var i = 0; i < daisies.length; i++) {",
+                "   daisies[i].setColor(\"255;255;255\");",
+                "}",
+                ""
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ]
         }
       ],
       "layers": [
