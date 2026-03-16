@@ -2769,7 +2769,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.5804687500000314,
+        "zoomFactor": 0.8993607583666806,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -7274,7 +7274,7 @@
           "effects": [],
           "behaviors": [],
           "content": {
-            "text": "Holf F and click to remove flowers",
+            "text": "Hold F and click to remove flowers",
             "opacity": 255,
             "scale": 1,
             "fontSize": 20,
@@ -17311,7 +17311,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9934433498259586,
+        "zoomFactor": 0.645510570331149,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -20316,15 +20316,6 @@
                 },
                 {
                   "type": {
-                    "value": "PushScene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game Scene\""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "SetBooleanVariable"
                   },
                   "parameters": [
@@ -20473,15 +20464,6 @@
                     "PlaceFlower.Brightness",
                     "=",
                     "\"bb\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PushScene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game Scene\""
                   ]
                 },
                 {
