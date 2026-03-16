@@ -2363,18 +2363,6 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PlayMusic"
-                  },
-                  "parameters": [
-                    "",
-                    "Assets\\MenuSoundEffect.mp3",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Scene"
                   },
                   "parameters": [
