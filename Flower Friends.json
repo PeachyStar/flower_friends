@@ -1929,6 +1929,18 @@
                 "=",
                 "1-GlobalVariable(SpawnRedStarter)"
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         },
@@ -2030,6 +2042,18 @@
                 "SpawnYellowStarter",
                 "=",
                 "1-GlobalVariable(SpawnYellowStarter)"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
               ]
             }
           ]
@@ -2133,6 +2157,18 @@
                 "=",
                 "1-GlobalVariable(SpawnBlueStarter)"
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
             }
           ]
         },
@@ -2219,7 +2255,20 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\MenuSoundEffect.mp3",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -2312,6 +2361,18 @@
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\MenuSoundEffect.mp3",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "Scene"
@@ -7796,19 +7857,19 @@
             "",
             "function isDiscovered(hue, br) {",
             "    if (hue === \"RYB\") {",
-            "        if (br === \"wb\") {",
-            "            return (vars.has(\"Discovered_RYB_wb\") && vars.get(\"Discovered_RYB_wb\").getAsBoolean()) ||",
-            "                   (vars.has(\"Discovered_RYB_bw\") && vars.get(\"Discovered_RYB_bw\").getAsBoolean()) ||",
+            "        if (br === \"ww\") {",
+            "            return (vars.has(\"Discovered_ryb_ww\") && vars.get(\"Discovered_ryb_ww\").getAsBoolean()) ||",
             "                   (vars.has(\"Discovered_ryb_wb\") && vars.get(\"Discovered_ryb_wb\").getAsBoolean()) ||",
             "                   (vars.has(\"Discovered_ryb_bw\") && vars.get(\"Discovered_ryb_bw\").getAsBoolean());",
             "        }",
-            "        if (br === \"ww\") {",
+            "        if (br === \"wb\") {",
             "            return (vars.has(\"Discovered_RYB_ww\") && vars.get(\"Discovered_RYB_ww\").getAsBoolean()) ||",
-            "                   (vars.has(\"Discovered_ryb_ww\") && vars.get(\"Discovered_ryb_ww\").getAsBoolean());",
+            "                   (vars.has(\"Discovered_ryb_bb\") && vars.get(\"Discovered_ryb_bb\").getAsBoolean());",
             "        }",
             "        if (br === \"bb\") {",
             "            return (vars.has(\"Discovered_RYB_bb\") && vars.get(\"Discovered_RYB_bb\").getAsBoolean()) ||",
-            "                   (vars.has(\"Discovered_ryb_bb\") && vars.get(\"Discovered_ryb_bb\").getAsBoolean());",
+            "                   (vars.has(\"Discovered_RYB_wb\") && vars.get(\"Discovered_RYB_wb\").getAsBoolean()) ||",
+            "                   (vars.has(\"Discovered_RYB_bw\") && vars.get(\"Discovered_RYB_bw\").getAsBoolean());",
             "        }",
             "    }",
             "    if (br === \"wb\") {",
